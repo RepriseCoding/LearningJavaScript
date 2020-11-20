@@ -99,14 +99,14 @@
                                     <td class="price-per-unit">20</td>
                                     <td>
 
-                                        <input type="text" class="form-control text-center quantity" id="quan1" value="1"
-                                            style="width:60px;">
+                                        <input type="text" class="form-control text-center quantity" id="quan1"
+                                            value="1"  style="width:60px;" onkeyup="sumPriceFun(this)" onblur="blurFun(this)">
 
                                     </td>
                                     <td>
 
-                                        <input type="text" class="form-control text-center sum" id="sum1" style="width:80px;"
-                                            readonly>
+                                        <input type="text" class="form-control text-center sum" id="sum1"
+                                            style="width:80px;" readonly>
 
                                     </td>
                                 </tr>
@@ -117,7 +117,7 @@
                                     <td>
 
                                         <input type="text" class="form-control text-center quantity" value="2"
-                                            style="width:60px;">
+                                            style="width:60px;" onkeyup="sumPriceFun(this)" onblur="blurFun(this)">
 
                                     </td>
                                     <td>
@@ -130,10 +130,10 @@
                                 <tr>
                                     <td scope="row">3</td>
                                     <td>มาชเมลโล่</td>
-                                    <td  class="price-per-unit">40</td>
+                                    <td class="price-per-unit">40</td>
                                     <td>
                                         <input type="text" class="form-control text-center quantity" value="3"
-                                            style="width:60px;">
+                                            style="width:60px;" onkeyup="sumPriceFun(this)" onblur="blurFun(this)">
                                     </td>
                                     <td>
 
@@ -149,7 +149,7 @@
                                     </td>
                                     <td>
                                         <h3 id="total">
-                                            
+
                                         </h3>
                                     </td>
                                 </tr>
