@@ -46,21 +46,22 @@ inputNum.addEventListener('keyup',showMultiplyKeyUp);
 // console.log(price[0].innerHTML);
 // console.log(quantity[1].value);
 // let parsePrice = parseInt(price[0].innerHTML);
-
+var price = document.getElementsByClassName('price-per-unit');
+    var quantity = document.getElementsByClassName('quantity');
+    var sumprice = document.getElementsByClassName('sum');
+    var totalPrice = document.getElementById('total');
+    var totaltotal = 0;
 
 function sumTotal(){
 
-    let price = document.getElementsByClassName('price-per-unit');
-    let quantity = document.getElementsByClassName('quantity');
-    let sumprice = document.getElementsByClassName('sum');
-    let totalPrice = document.getElementById('total');
-    let totaltotal = 0;
+    
 
-    for(let i=0; i<price.length; i++){
+    for(var i=0; i<price.length; i++){
         
-        let parsePrice = parseInt(price[i].innerHTML);
-        let parseQuantity = parseInt(quantity[i].value);
-        let totalsum = parsePrice * parseQuantity ;
+        var parsePrice = parseInt(price[i].innerHTML);
+        var parseQuantity = parseInt(quantity[i].value);
+        var totalsum = parsePrice * parseQuantity ;
+        console.log(parseQuantity);
         totaltotal += totalsum
         sumprice[i].value = totalsum ;
         
@@ -69,16 +70,8 @@ function sumTotal(){
     totalPrice.innerHTML = totaltotal;
     
 }
+for(var i=0; i<quantity.length; i++){
 
-sumTotal();
+    quantity[i].addEventListener('keyup',sumTotal);
+}
 
-// let quan = document.getElementById('quan1');
-// let sum1 = document.getElementById('sum1');
-
-// function changeQuan(){
-//     let quanNum = Number(quan.value);
-//     let sumNum = Number(sum1.value);
-//     let newsum = quanNum * sumNum;
-//     sum1.value = newsum;
-// }
-// quan.addEventListener('keyup',changeQuan);
